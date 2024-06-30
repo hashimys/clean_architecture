@@ -1,11 +1,14 @@
 import 'package:clean_architecture/core/error/exceptions.dart';
 import 'package:clean_architecture/core/error/failuers.dart';
+import 'package:clean_architecture/core/network/network_info.dart';
 import 'package:clean_architecture/features/posts/data/models/post_model.dart';
 import 'package:clean_architecture/features/posts/data/sources/post_local_data_source.dart';
 import 'package:clean_architecture/features/posts/data/sources/post_remote_data_source.dart';
 import 'package:clean_architecture/features/posts/domain/entities/post.dart';
 import 'package:clean_architecture/features/posts/domain/repositories/posts_repositoriy.dart';
 import 'package:dartz/dartz.dart';
+
+typedef Future<Unit> DeleteOrUpdateOrAddPost();
 
 class PostsRepositoryImpl implements PostsRepository {
   final PostRemoteDataSource remoteDataSource;

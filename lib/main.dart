@@ -1,6 +1,7 @@
 import 'package:clean_architecture/core/app_theme.dart';
 import 'package:clean_architecture/features/posts/presentation/bloc/add_delete_update_post/add_delete_update_post_bloc.dart';
 import 'package:clean_architecture/features/posts/presentation/bloc/posts/posts_bloc.dart';
+import 'package:clean_architecture/features/posts/presentation/pages/posts_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -25,8 +26,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: appTheme,
         title: 'Posts App',
-        home: Container(),
-        //PostsPage(),
+        home: const PostsPage(),
       ),
     );
   }
